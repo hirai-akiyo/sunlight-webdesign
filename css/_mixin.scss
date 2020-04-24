@@ -1,0 +1,73 @@
+@charset "utf-8";
+
+// design
+$grn:#3EB68E;
+$yel:#E8CD1F;
+$wht:#fff;
+$blk:#000;
+
+
+// max-width
+@mixin maxwidth($max,$normal){
+	max-width:$max;
+	width:$normal;
+}
+
+// position
+@mixin pst_tl($top: 0, $left: 0) {
+	position: absolute;
+	top: $top;
+	left: $left;
+}
+@mixin pst_tr($top: 0, $right: 0) {
+	position: absolute;
+	top: $top;
+	right: $right;
+}
+@mixin pst_bl($bottom: 0, $left: 0) {
+	position: absolute;
+	bottom: $bottom;
+	left: $left;
+}
+@mixin pst_br($bottom: 0, $right: 0) {
+	position: absolute;
+	bottom: $bottom;
+	right: $right;
+}
+
+
+// max-width
+@mixin deco{
+	content:"";
+	display:inline-block;
+}
+
+//btn
+@mixin btn($color){
+	display: block;
+	border-radius: 5px;
+	text-decoration: none;
+	@if $color == green{
+		background: $grn;
+		border: 1px solid #19A777;
+		color:$wht;
+		&:hover{
+			background: #369B78;
+			border: 1px solid #349675;
+		}
+	}@else if $color == yellow{
+		background: $yel;
+		border: 1px solid #E2C50A;
+		color:$wht;
+		&:hover{
+			background: #D8BB00;
+			border: 1px solid #D8BB00;
+		}
+	}@else if $color == wht{
+		background: $wht;
+		color:$blk;
+		&:hover{
+			background: #E3E3E3;
+		}
+	}
+}

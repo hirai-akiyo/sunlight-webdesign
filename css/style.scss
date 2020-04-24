@@ -1,0 +1,413 @@
+@charset "utf-8";
+@import "mixin";
+
+
+
+/************* 基本設定 *************/
+html {
+	font-size:62.5%;
+}
+body {
+	font-size:1.4rem;
+ font-family: 'Noto Sans JP',  "游ゴシック", "Yu Gothic", YuGothic, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic",sans-serif;
+	text-align: center;
+}
+
+
+
+
+/**** リンク ****/
+a{
+	transition: .2s;
+}
+/**** ベース ****/
+.page-common{
+	max-width: 600px;
+	width: 100%;
+	margin: 0 auto;
+	.icon{
+		font-weight: normal;
+	}
+}
+/**** フォント ****/
+.page-common{
+	.f-grn{
+		color:$grn;
+	}
+	.f-gry{
+		color:lighten($blk,50%);
+	}
+}
+/**** ボタン ****/
+.page-common{
+	.button.rect{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	.button-wht{
+		@include btn(wht);
+	}
+	.button-yel{
+		@include btn(yellow);
+	}
+	.button-grn{
+		@include btn(green);
+	}
+}
+
+/**** 下層 共通 ****/
+.page-subcontents{
+	.header{//　ヘッダー
+		box-shadow:0 2px 8px rgba(0,0,0,0.1); 
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+		padding: 30px 20px 20px;
+		margin-bottom: 20px;
+		position: relative;
+		overflow: hidden;
+		.logo{
+			width: 52px;
+			font-size: 0;
+			text-indent: 101%;
+			a{
+				width: 52px;
+				height: 52px;
+				display: block;
+				background: url(../images/logo_mini.svg) no-repeat center $blk;
+				background-size: 32px;
+				transition:none;
+			}
+		}
+	}
+	
+	.box-subwrapper{
+		padding:0 20px 25px;
+	}
+	
+	.box-subcontents{
+		box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+		margin-bottom: 20px;
+		&:last-child{
+			margin-bottom: 0;
+		}
+	}
+}
+
+
+
+/************* トップ *************/
+.page-index{
+	padding: 80px 30px 50px;
+	background: url(../images/top-bg.jpg) no-repeat center;
+	background-size: 100%;
+	
+	.cont-login{
+		margin-bottom: 30px;
+		.logo{
+			height: 100px;
+			background:url(../images/logo.svg) no-repeat center $blk;
+			background-size: 230px;
+			margin-bottom: 30px;
+			font-size: 0;
+			text-indent: 101%;
+		}
+		&__text-1{
+			font-size: 1.8rem;
+			line-height: 1.6;
+			margin-bottom: 30px;
+		}
+		&__menu{
+			display: flex;
+			justify-content: space-between;
+			position: relative;
+			z-index: 1;
+			.menu-item{
+				max-width: 250px;
+				width: 47%;
+				.button{
+					padding: 22px 0;
+					font-size: 1.8rem;
+					font-weight: bold;
+					box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+					.icon:before{
+						margin-right: 10px;
+						font-size: 2.4rem;
+					}
+				}
+			}
+		}
+		&__image{
+			width: calc(100% + 60px);
+			margin:-70px 0 5px -30px;
+			position: relative;
+		}
+		&__text-2{
+			text-align: left;
+			line-height: 1.6;
+		}
+	}
+	
+	.footer__nav{
+		.lists-line{
+			display: flex;
+			flex-wrap: wrap;
+			.lists__item{
+				width: 50%;
+				&:nth-child(-n+2){
+					margin-bottom: 30px;
+				}
+			}
+		}
+		&-link{
+			display: block;
+			color:#DBDBDB;
+			text-align: left;
+			font-size: 1.2rem;
+			line-height: 1.4;
+		}
+	}
+}
+
+
+
+/************* 本棚 *************/
+.page-booklist{
+	
+	.header{
+		&__title{
+			font-weight: bold;
+			font-size: 1.6rem;
+			width: calc(100% - 52px - 80px);
+			@include pst_tl(calc(50% - 8px),calc(50% - calc((100% - 52px - 80px)/2)));
+		}
+		.profile{
+			&__box{
+				width: 80px;
+			}
+			&__image{
+				width: 40px;
+				margin: 0 auto 7px;
+				.profile-image{
+					margin-left: 5px;
+				}
+			}
+			&__text{
+				font-size: 1.1rem;
+			}
+		}
+	}
+	
+	.cont-shelf{
+		padding-bottom: 20px;
+		
+		.rantal-info{
+			&__box{
+				display: flex;
+				justify-content: space-between;
+				padding: 10px 12px 7px;
+				line-height: 1.4;
+			}
+			&__id{
+				text-align: left;
+			}
+			&__date{
+				text-align: right;
+			}
+		}
+		
+		.book-lists__box{
+			display: flex;
+			flex-wrap: wrap;
+			align-items: flex-end;
+			margin:0 25px 15px;
+			padding-top:10px;
+			background: #F4F2E9;
+			.lists__item{
+				width: 50%;
+				padding:5px 0 15px;
+				position: relative;
+				&:nth-child(odd){
+					padding-left: 5%;
+					&:after{
+						content: "";
+						display: block;
+						width: calc(200% + 10px);
+						height: 10px;
+						background: #D0CAA2;
+						box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+						@include pst_bl(5px,-5px);
+						z-index: 1;
+					}
+				}
+				&:nth-child(even){
+					padding-right: 5%;
+				}
+				.book-lists-link{
+					display: block;
+				}
+				.book-lists-image{
+					max-width: 95px;
+					width: 90%;
+					@media screen and (max-width: 374px) {
+						width: 70%;
+						transition: .2s;
+					}
+				}
+			}
+		}
+		
+		.book-opera__menu{
+			display: flex;
+			justify-content: space-between;
+			padding:0 25px;
+			.menu-item{
+				width: 48%;
+				.button{
+					height: 40px;
+					font-weight: bold;
+					line-height: 1.4;
+					border-radius: 3px;
+					.icon.ri-inbox-unarchive-fill{
+						font-size: 2.4rem;
+						margin-right: 5px;
+					}
+					.icon.ri-arrow-right-line{
+						font-size: 1.6rem;
+						margin-left: 5px;
+					}
+				}
+			}
+		}
+	}
+}
+
+
+
+
+
+/************* 詳細 *************/
+.page-bookdetail{
+	
+	.header{
+		&__title{
+			line-height: 1.4;
+		}
+		&__button{
+			font-size: 1rem;
+			font-weight: bold;
+			.button{
+				width: 44px;
+				height: 44px;
+				margin: 0 auto 5px;
+				padding-top: 10px;
+				font-size: 2.4rem;
+				border-radius: 3px;
+			}
+		}
+	}
+	
+	.cont-bookdetail{
+		padding: 30px 20px;
+		
+		.nav__link{
+			text-align: left;
+			margin-bottom: 30px;
+			.nav-link{
+				color:#000;
+				text-decoration: none;
+				margin-left: -10px;
+				display: flex;
+				align-items: center;
+				.icon{
+					font-size: 3rem;
+				}
+			}
+		}
+
+		.book-image{
+			&__box{
+				margin-bottom: 40px;
+				padding:40px 0 15px;
+				background: #F4F2E9;
+				position: relative;
+				&:after{
+					content: "";
+					display: block;
+					width: calc(100% + 10px);
+					height: 10px;
+					background: #D0CAA2;
+					box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+					@include pst_bl(5px,-5px);
+					z-index: 1;
+				}
+			}
+			&__image{
+				width: 65%;
+			}
+		}
+
+		.book-item{
+			&__box{
+				text-align: left;
+			}
+			&__title{
+				font-weight: bold;
+				font-size: 1.6rem;
+				line-height: 1.4;
+				padding-bottom: 7px;
+				border-bottom: 3px solid $yel;
+				margin-bottom: 50px;
+			}
+			&__info{
+				margin-bottom: 20px;
+				.list-item{
+					margin-bottom: 5px;
+					line-height: 1.4;
+				}
+			}
+			&__text{
+				line-height: 1.6;
+				margin-bottom: 50px;
+				&-title{
+					margin-bottom:3px;
+					text-align: center;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					.icon{
+						font-size: 2.4rem;
+						margin-right: 5px;
+					}
+				}
+			}
+		}
+
+		.book-opera__menu{
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			.menu-item{
+				width: 47%;
+				font-size: 1.2rem;
+				.button{
+					padding: 12px 0;
+				}
+				&:nth-child(1){
+					width: 100%;
+					font-size: 1.8rem;
+					margin-bottom: 25px;
+					.button{
+						padding: 18px 0;
+						box-shadow: 0 0 8px rgba(0,0,0,0.2);
+						.icon{
+							font-size: 2.4rem;
+							margin-right: 10px;
+						}
+					}
+				}
+			}
+		}
+	}
+}

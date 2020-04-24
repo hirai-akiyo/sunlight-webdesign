@@ -1,0 +1,396 @@
+@charset "UTF-8";
+/************* 基本設定 *************/
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.4rem;
+  font-family: 'Noto Sans JP',  "游ゴシック", "Yu Gothic", YuGothic, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic",sans-serif;
+  text-align: center;
+}
+
+/**** リンク ****/
+a {
+  transition: .2s;
+}
+
+/**** ベース ****/
+.page-common {
+  max-width: 600px;
+  width: 100%;
+  margin: 0 auto;
+}
+.page-common .icon {
+  font-weight: normal;
+}
+
+/**** フォント ****/
+.page-common .f-grn {
+  color: #3EB68E;
+}
+.page-common .f-gry {
+  color: gray;
+}
+
+/**** ボタン ****/
+.page-common .button.rect {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.page-common .button-wht {
+  display: block;
+  border-radius: 5px;
+  text-decoration: none;
+  background: #fff;
+  color: #000;
+}
+.page-common .button-wht:hover {
+  background: #E3E3E3;
+}
+.page-common .button-yel {
+  display: block;
+  border-radius: 5px;
+  text-decoration: none;
+  background: #E8CD1F;
+  border: 1px solid #E2C50A;
+  color: #fff;
+}
+.page-common .button-yel:hover {
+  background: #D8BB00;
+  border: 1px solid #D8BB00;
+}
+.page-common .button-grn {
+  display: block;
+  border-radius: 5px;
+  text-decoration: none;
+  background: #3EB68E;
+  border: 1px solid #19A777;
+  color: #fff;
+}
+.page-common .button-grn:hover {
+  background: #369B78;
+  border: 1px solid #349675;
+}
+
+/**** 下層 共通 ****/
+.page-subcontents .header {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 30px 20px 20px;
+  margin-bottom: 20px;
+  position: relative;
+  overflow: hidden;
+}
+.page-subcontents .header .logo {
+  width: 52px;
+  font-size: 0;
+  text-indent: 101%;
+}
+.page-subcontents .header .logo a {
+  width: 52px;
+  height: 52px;
+  display: block;
+  background: url(../images/logo_mini.svg) no-repeat center #000;
+  background-size: 32px;
+  transition: none;
+}
+.page-subcontents .box-subwrapper {
+  padding: 0 20px 25px;
+}
+.page-subcontents .box-subcontents {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+.page-subcontents .box-subcontents:last-child {
+  margin-bottom: 0;
+}
+
+/************* トップ *************/
+.page-index {
+  padding: 80px 30px 50px;
+  background: url(../images/top-bg.jpg) no-repeat center;
+  background-size: 100%;
+}
+.page-index .cont-login {
+  margin-bottom: 30px;
+}
+.page-index .cont-login .logo {
+  height: 100px;
+  background: url(../images/logo.svg) no-repeat center #000;
+  background-size: 230px;
+  margin-bottom: 30px;
+  font-size: 0;
+  text-indent: 101%;
+}
+.page-index .cont-login__text-1 {
+  font-size: 1.8rem;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+.page-index .cont-login__menu {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  z-index: 1;
+}
+.page-index .cont-login__menu .menu-item {
+  max-width: 250px;
+  width: 47%;
+}
+.page-index .cont-login__menu .menu-item .button {
+  padding: 22px 0;
+  font-size: 1.8rem;
+  font-weight: bold;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+.page-index .cont-login__menu .menu-item .button .icon:before {
+  margin-right: 10px;
+  font-size: 2.4rem;
+}
+.page-index .cont-login__image {
+  width: calc(100% + 60px);
+  margin: -70px 0 5px -30px;
+  position: relative;
+}
+.page-index .cont-login__text-2 {
+  text-align: left;
+  line-height: 1.6;
+}
+.page-index .footer__nav .lists-line {
+  display: flex;
+  flex-wrap: wrap;
+}
+.page-index .footer__nav .lists-line .lists__item {
+  width: 50%;
+}
+.page-index .footer__nav .lists-line .lists__item:nth-child(-n+2) {
+  margin-bottom: 30px;
+}
+.page-index .footer__nav-link {
+  display: block;
+  color: #DBDBDB;
+  text-align: left;
+  font-size: 1.2rem;
+  line-height: 1.4;
+}
+
+/************* 本棚 *************/
+.page-booklist .header__title {
+  font-weight: bold;
+  font-size: 1.6rem;
+  width: calc(100% - 52px - 80px);
+  position: absolute;
+  top: calc(50% - 8px);
+  left: calc(50% - calc((100% - 52px - 80px)/2));
+}
+.page-booklist .header .profile__box {
+  width: 80px;
+}
+.page-booklist .header .profile__image {
+  width: 40px;
+  margin: 0 auto 7px;
+}
+.page-booklist .header .profile__image .profile-image {
+  margin-left: 5px;
+}
+.page-booklist .header .profile__text {
+  font-size: 1.1rem;
+}
+.page-booklist .cont-shelf {
+  padding-bottom: 20px;
+}
+.page-booklist .cont-shelf .rantal-info__box {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 12px 7px;
+  line-height: 1.4;
+}
+.page-booklist .cont-shelf .rantal-info__id {
+  text-align: left;
+}
+.page-booklist .cont-shelf .rantal-info__date {
+  text-align: right;
+}
+.page-booklist .cont-shelf .book-lists__box {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  margin: 0 25px 15px;
+  padding-top: 10px;
+  background: #F4F2E9;
+}
+.page-booklist .cont-shelf .book-lists__box .lists__item {
+  width: 50%;
+  padding: 5px 0 15px;
+  position: relative;
+}
+.page-booklist .cont-shelf .book-lists__box .lists__item:nth-child(odd) {
+  padding-left: 5%;
+}
+.page-booklist .cont-shelf .book-lists__box .lists__item:nth-child(odd):after {
+  content: "";
+  display: block;
+  width: calc(200% + 10px);
+  height: 10px;
+  background: #D0CAA2;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  bottom: 5px;
+  left: -5px;
+  z-index: 1;
+}
+.page-booklist .cont-shelf .book-lists__box .lists__item:nth-child(even) {
+  padding-right: 5%;
+}
+.page-booklist .cont-shelf .book-lists__box .lists__item .book-lists-link {
+  display: block;
+}
+.page-booklist .cont-shelf .book-lists__box .lists__item .book-lists-image {
+  max-width: 95px;
+  width: 90%;
+}
+@media screen and (max-width: 374px) {
+  .page-booklist .cont-shelf .book-lists__box .lists__item .book-lists-image {
+    width: 70%;
+    transition: .2s;
+  }
+}
+.page-booklist .cont-shelf .book-opera__menu {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 25px;
+}
+.page-booklist .cont-shelf .book-opera__menu .menu-item {
+  width: 48%;
+}
+.page-booklist .cont-shelf .book-opera__menu .menu-item .button {
+  height: 40px;
+  font-weight: bold;
+  line-height: 1.4;
+  border-radius: 3px;
+}
+.page-booklist .cont-shelf .book-opera__menu .menu-item .button .icon.ri-inbox-unarchive-fill {
+  font-size: 2.4rem;
+  margin-right: 5px;
+}
+.page-booklist .cont-shelf .book-opera__menu .menu-item .button .icon.ri-arrow-right-line {
+  font-size: 1.6rem;
+  margin-left: 5px;
+}
+
+/************* 詳細 *************/
+.page-bookdetail .header__title {
+  line-height: 1.4;
+}
+.page-bookdetail .header__button {
+  font-size: 1rem;
+  font-weight: bold;
+}
+.page-bookdetail .header__button .button {
+  width: 44px;
+  height: 44px;
+  margin: 0 auto 5px;
+  padding-top: 10px;
+  font-size: 2.4rem;
+  border-radius: 3px;
+}
+.page-bookdetail .cont-bookdetail {
+  padding: 30px 20px;
+}
+.page-bookdetail .cont-bookdetail .nav__link {
+  text-align: left;
+  margin-bottom: 30px;
+}
+.page-bookdetail .cont-bookdetail .nav__link .nav-link {
+  color: #000;
+  text-decoration: none;
+  margin-left: -10px;
+  display: flex;
+  align-items: center;
+}
+.page-bookdetail .cont-bookdetail .nav__link .nav-link .icon {
+  font-size: 3rem;
+}
+.page-bookdetail .cont-bookdetail .book-image__box {
+  margin-bottom: 40px;
+  padding: 40px 0 15px;
+  background: #F4F2E9;
+  position: relative;
+}
+.page-bookdetail .cont-bookdetail .book-image__box:after {
+  content: "";
+  display: block;
+  width: calc(100% + 10px);
+  height: 10px;
+  background: #D0CAA2;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  bottom: 5px;
+  left: -5px;
+  z-index: 1;
+}
+.page-bookdetail .cont-bookdetail .book-image__image {
+  width: 65%;
+}
+.page-bookdetail .cont-bookdetail .book-item__box {
+  text-align: left;
+}
+.page-bookdetail .cont-bookdetail .book-item__title {
+  font-weight: bold;
+  font-size: 1.6rem;
+  line-height: 1.4;
+  padding-bottom: 7px;
+  border-bottom: 3px solid #E8CD1F;
+  margin-bottom: 50px;
+}
+.page-bookdetail .cont-bookdetail .book-item__info {
+  margin-bottom: 20px;
+}
+.page-bookdetail .cont-bookdetail .book-item__info .list-item {
+  margin-bottom: 5px;
+  line-height: 1.4;
+}
+.page-bookdetail .cont-bookdetail .book-item__text {
+  line-height: 1.6;
+  margin-bottom: 50px;
+}
+.page-bookdetail .cont-bookdetail .book-item__text-title {
+  margin-bottom: 3px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.page-bookdetail .cont-bookdetail .book-item__text-title .icon {
+  font-size: 2.4rem;
+  margin-right: 5px;
+}
+.page-bookdetail .cont-bookdetail .book-opera__menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.page-bookdetail .cont-bookdetail .book-opera__menu .menu-item {
+  width: 47%;
+  font-size: 1.2rem;
+}
+.page-bookdetail .cont-bookdetail .book-opera__menu .menu-item .button {
+  padding: 12px 0;
+}
+.page-bookdetail .cont-bookdetail .book-opera__menu .menu-item:nth-child(1) {
+  width: 100%;
+  font-size: 1.8rem;
+  margin-bottom: 25px;
+}
+.page-bookdetail .cont-bookdetail .book-opera__menu .menu-item:nth-child(1) .button {
+  padding: 18px 0;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+}
+.page-bookdetail .cont-bookdetail .book-opera__menu .menu-item:nth-child(1) .button .icon {
+  font-size: 2.4rem;
+  margin-right: 10px;
+}
